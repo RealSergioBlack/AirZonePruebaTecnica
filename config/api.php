@@ -19,7 +19,7 @@ return [
         'user' => 'App\Models\User'
     ],
     'controllers' => [
-
+        'category' => '\App\Http\Controllers\CategoryController',
     ]
 
 ];
