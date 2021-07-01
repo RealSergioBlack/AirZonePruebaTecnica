@@ -20,6 +20,7 @@ return [
     ],
     'controllers' => [
         'category' => '\App\Http\Controllers\CategoryController',
+        'post' => '\App\Http\Controllers\PostController',
     ]
 
 ];

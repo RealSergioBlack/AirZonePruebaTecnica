@@ -20,4 +20,5 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware([])->group(function () {
     Route::resource('categories', config('api.controllers.category'));
+    Route::get('postCommentsUsers/{post_id}', config('api.controllers.post') . '@getPostCommentsAndUsers');
 });
