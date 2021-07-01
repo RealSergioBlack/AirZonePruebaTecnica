@@ -25,4 +25,12 @@ class Category extends Model
         $this->setTable(config('api.tables.categories'));
     }
 
+    public function posts () {
+        return $this->belongsToMany(
+            config('api.models.post'),
+            config('api.tables.categories_posts'),
+            'category',
+            'blog'
+        ); 
+    }
 }

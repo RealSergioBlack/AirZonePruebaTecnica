@@ -22,6 +22,19 @@ class Comment extends Model
         $this->setTable(config('api.tables.comments'));
     }
     
+    public function users()
+    {
+        return $this->belongsTo(config('api.models.user'), 'user', 'id');
+    }
+
+    public function posts () {
+        return $this->belongsToMany(
+            config('api.models.post'),
+            config('api.tables.comments_posts'),
+            'comment',
+            'blog'
+        ); 
+    }
 
 
 }

@@ -28,5 +28,12 @@ class User extends Authenticatable
         $this->setTable(config('api.tables.users'));
     }
 
+    public function comments() {
+        return $this->hasMany(config('api.models.comment'), 'user', 'id');
+    }
+
+    public function posts() {
+        return $this->hasMany(config('api.models.post'), 'user', 'id');
+    }
 
 }
